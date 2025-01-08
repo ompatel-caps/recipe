@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Planner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+       
+        .meal-planner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .meal-day {
+            background: #fff;
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 15px;
+            width: 200px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        .meal-day h3 {
+            margin: 10px 0;
+        }
+        .meal-day img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .meal-day button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .meal-day button:hover {
+            background-color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a class="dropdown-item" href="index.html"><i class="fas fa-home"></i>&nbsp;&nbsp;Home</a>
+
+        <button class="btn btn-custom" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <span class="navbar-toggler-icon"><i class="fa-solid fa-user"></i></span>
+        </button>
+    
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title " id="offcanvasRightLabel"><i class="fa-solid fa-user"></i>&nbsp;&nbsp;hi Chef</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+
+                 
+                <!-- <a class="dropdown-item" href="#"><i class="fas fa-home"></i>&nbsp;&nbsp;Home</a> -->
+                
+                <hr class="menu-divider">
+                <a class="dropdown-item" href="myrecipe.html"><i class="fas fa-utensils"></i>&nbsp;&nbsp;Recipes</a>
+                <hr class="menu-divider">
+                <a class="dropdown-item" href="favorite.html"><i class="fa-solid fa-star"></i>&nbsp;&nbsp;Favorite</a>
+                <hr class="menu-divider">
+                <a class="dropdown-item" href="Nutrition.html"><i class="fas fa-envelope"></i>&nbsp;&nbsp;Meal Planner
+                <hr class="menu-divider">
+                <a class="dropdown-item" href="Mealplanner.html"><i class="fas fa-envelope"></i>&nbsp;&nbsp;Nutrition
+
+                </a>
+                <hr class="menu-divider">
+                </div>
+            </div>
+        </div>
+
+       
+    <h1>Weekly Meal Planner</h1>
+
+
+</header>
+  
+    <div id="meal-planner" class="meal-planner">
+        <!-- Meal Planner days will be dynamically populated here -->
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+          <p>&copy; 2025 YourWebsiteName. All rights reserved.</p>
+          <ul class="footer-links">
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+            <li><a href="/terms">Terms of Service</a></li>
+          </ul>
+        </div>
+      </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            displayMealPlanner();
+        });
+
+        function displayMealPlanner() {
+            // Fetch the favorite recipes from localStorage
+            const favoriteIds = JSON.parse(localStorage.getItem("favorites")) || [];
+
+            if (favoriteIds.length === 0) {
+                alert("No favorite recipes found. Please add some favorites.");
+                return;
+            }
+
+            // Fetch all recipes from API or your data source
+            fetch("data/recipe.json")
+                .then(response => response.json())
+                .then(recipes => {
+                    // Filter the recipes based on favoriteIds
+                    const favoriteRecipes = recipes.filter(recipe =>
+                        favoriteIds.includes(recipe.id.toString())
+                    );
+
+                    // Shuffle the favorite recipes to randomly suggest meals
+                    shuffleArray(favoriteRecipes);
+
+                    // Display a meal for each day of the week
+                    const mealPlannerContainer = document.getElementById("meal-planner");
+                    const daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+                    for (let i = 0; i < 7; i++) {
+                        const mealDay = document.createElement("div");
+                        mealDay.className = "meal-day";
+                        mealDay.innerHTML = `
+                            <h3>${daysOfWeek[i]}</h3>
+                            <img src="${favoriteRecipes[i % favoriteRecipes.length].image}" alt="${favoriteRecipes[i % favoriteRecipes.length].name}">
+                            <p>${favoriteRecipes[i % favoriteRecipes.length].name}</p>
+                            <button onclick="viewRecipe(${favoriteRecipes[i % favoriteRecipes.length].id})">View Recipe</button>
+                        `;
+                        mealPlannerContainer.appendChild(mealDay);
+                    }
+                })
+                .catch(error => {
+                    console.error("Error fetching recipes:", error);
+                });
+        }
+
+        // Helper function to shuffle the array for random meal suggestion
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        function viewRecipe(recipeId) {
+            // View recipe functionality, open a detailed view of the recipe
+            window.location.href = `viewpage.html?recipeId=${recipeId}`;
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>

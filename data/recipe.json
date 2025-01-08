@@ -1,0 +1,377 @@
+[
+    {
+        "id": 1,
+        "name": "Spaghetti Carbonara",
+        "image": "images/Spaghetti.webp",
+        "category": "Dinner",
+        "ingredients": ["Spaghetti", "Eggs", "Pancetta", "Parmesan cheese", "Garlic"],
+        "nutrition": {
+            "calories": 450,
+            "protein": "20g",
+            "carbs": "55g",
+            "fat": "15g"
+        },
+        "cookTime": "20 minutes",
+        "instructions": "Cook spaghetti, then toss with eggs, pancetta, cheese, and garlic."
+    },
+    {
+        "id": 2,
+        "name": "Grilled Cheese Sandwich",
+        "image": "images/GrilledCheese.webp",
+        "category": "Lunch",
+        "ingredients": ["Bread", "Cheese", "Butter"],
+        "nutrition": {
+            "calories": 350,
+            "protein": "15g",
+            "carbs": "35g",
+            "fat": "20g"
+        },
+        "cookTime": "10 minutes",
+        "instructions": "Butter the bread, place cheese inside, and grill until golden."
+    },
+    {
+        "id": 3,
+        "name": "Caesar Salad",
+        "image": "images/caesarsalad.webp",
+        "category": "Lunch",
+        "ingredients": ["Romaine lettuce", "Croutons", "Parmesan cheese", "Caesar dressing"],
+        "nutrition": {
+            "calories": 250,
+            "protein": "7g",
+            "carbs": "15g",
+            "fat": "18g"
+        },
+        "cookTime": "10 minutes",
+        "instructions": "Toss lettuce, croutons, cheese, and dressing."
+    },
+    {
+        "id": 4,
+        "name": "Beef Tacos",
+        "image": "images/Beeftaco.webp",
+        "category": "Dinner",
+        "ingredients": ["Ground beef", "Taco shells", "Lettuce", "Cheese", "Sour cream"],
+        "nutrition": {
+            "calories": 300,
+            "protein": "20g",
+            "carbs": "20g",
+            "fat": "15g"
+        },
+        "cookTime": "25 minutes",
+        "instructions": "Cook beef, then assemble in taco shells with toppings."
+    },
+    {
+        "id": 5,
+        "name": "Chocolate Chip Cookies",
+        "image": "images/chocolate-cookies.webp",
+        "category": "Dessert",
+        "ingredients": ["Flour", "Sugar", "Butter", "Chocolate chips", "Eggs"],
+        "nutrition": {
+            "calories": 150,
+            "protein": "2g",
+            "carbs": "22g",
+            "fat": "7g"
+        },
+        "cookTime": "15 minutes",
+        "instructions": "Mix ingredients, form dough balls, and bake."
+    },
+    {
+        "id": 6,
+        "name": "Chicken Stir Fry",
+        "image": "images/Chicken_Stir_Fry.webp",
+        "category": "Dinner",
+        "ingredients": ["Chicken breasts", "Bell peppers", "Soy sauce", "Ginger", "Garlic"],
+        "nutrition": {
+            "calories": 350,
+            "protein": "30g",
+            "carbs": "25g",
+            "fat": "15g"
+        },
+        "cookTime": "20 minutes",
+        "instructions": "Stir fry chicken and vegetables, then add sauce."
+    },
+    {
+        "id": 7,
+        "name": "Vegetable Soup",
+        "image": "images/vegetable-soup.webp",
+        "category": "Lunch",
+        "ingredients": ["Carrots", "Celery", "Potatoes", "Tomatoes", "Vegetable broth"],
+        "nutrition": {
+            "calories": 150,
+            "protein": "5g",
+            "carbs": "30g",
+            "fat": "2g"
+        },
+        "cookTime": "40 minutes",
+        "instructions": "Cook vegetables in broth until tender."
+    },
+    {
+        "id": 8,
+        "name": "Penne Arrabbiata",
+        "image": "images/Penne_Arrabbiata.webp",
+        "category": "Dinner",
+        "ingredients": ["Penne pasta", "Tomato sauce", "Garlic", "Red chili flakes", "Olive oil"],
+        "nutrition": {
+            "calories": 400,
+            "protein": "12g",
+            "carbs": "70g",
+            "fat": "10g"
+        },
+        "cookTime": "25 minutes",
+        "instructions": "Cook pasta, then toss with spicy tomato sauce."
+    },
+    {
+        "id": 9,
+        "name": "Margherita Pizza",
+        "image": "images/Margherita_Pizza.webp",
+        "category": "Dinner",
+        "ingredients": ["Pizza dough", "Tomato sauce", "Mozzarella cheese", "Basil"],
+        "nutrition": {
+            "calories": 250,
+            "protein": "12g",
+            "carbs": "30g",
+            "fat": "10g"
+        },
+        "cookTime": "15 minutes",
+        "instructions": "Top dough with sauce, cheese, and basil, then bake."
+    },
+    {
+        "id": 10,
+        "name": "Apple Pie",
+        "image": "images/apple-pie_.webp",
+        "category": "Dessert",
+        "ingredients": ["Apples", "Sugar", "Flour", "Butter", "Cinnamon"],
+        "nutrition": {
+            "calories": 250,
+            "protein": "2g",
+            "carbs": "40g",
+            "fat": "10g"
+        },
+        "cookTime": "45 minutes",
+        "instructions": "Bake apples with sugar and cinnamon in pie crust."
+    },
+    {
+        "id": 11,
+        "name": "Banana Bread",
+        "image": "images/Banana_Bread.webp",
+        "category": "Dessert",
+        "ingredients": ["Bananas", "Flour", "Sugar", "Eggs", "Baking powder"],
+        "nutrition": {
+            "calories": 200,
+            "protein": "3g",
+            "carbs": "40g",
+            "fat": "5g"
+        },
+        "cookTime": "60 minutes",
+        "instructions": "Mix ingredients and bake."
+    },
+    {
+        "id": 12,
+        "name": "Chicken Parmesan",
+        "image": "images/Chicken_Parmesan.webp",
+        "category": "Dinner",
+        "ingredients": ["Chicken breasts", "Marinara sauce", "Mozzarella cheese", "Parmesan cheese"],
+        "nutrition": {
+            "calories": 600,
+            "protein": "45g",
+            "carbs": "25g",
+            "fat": "35g"
+        },
+        "cookTime": "30 minutes",
+        "instructions": "Bread and fry chicken, top with sauce and cheese, and bake."
+    },
+    {
+        "id": 13,
+        "name": "Lemon Meringue Pie",
+        "image": "images/lemon-meringue-pie.webp",
+        "category": "Dessert",
+        "ingredients": ["Lemons", "Sugar", "Eggs", "Butter", "Pie crust"],
+        "nutrition": {
+            "calories": 300,
+            "protein": "3g",
+            "carbs": "45g",
+            "fat": "15g"
+        },
+        "cookTime": "60 minutes",
+        "instructions": "Bake lemon filling and meringue in pie crust."
+    },
+    {
+        "id": 14,
+        "name": "Tom Yum Soup",
+        "image": "images/Tom_Yum_Soup.webp",
+        "category": "Lunch",
+        "ingredients": ["Shrimp", "Lemongrass", "Kaffir lime leaves", "Chilies", "Fish sauce"],
+        "nutrition": {
+            "calories": 150,
+            "protein": "20g",
+            "carbs": "15g",
+            "fat": "5g"
+        },
+        "cookTime": "20 minutes",
+        "instructions": "Boil shrimp and herbs in broth, then serve."
+    },
+    {
+        "id": 15,
+        "name": "Chicken Noodle Soup",
+        "image": "images/Chicken_Noodle_Soup.webp",
+        "category": "Lunch",
+        "ingredients": ["Chicken breasts", "Noodles", "Carrots", "Celery", "Chicken broth"],
+        "nutrition": {
+            "calories": 200,
+            "protein": "25g",
+            "carbs": "20g",
+            "fat": "5g"
+        },
+        "cookTime": "30 minutes",
+        "instructions": "Boil chicken, add veggies and noodles, and cook in broth."
+    },
+    {
+        "id": 16,
+        "name": "Beef Burger",
+        "image": "images/Beef_Burger.webp",
+        "category": "Lunch",
+        "ingredients": ["Ground beef", "Burger buns", "Lettuce", "Tomato", "Cheese"],
+        "nutrition": {
+            "calories": 400,
+            "protein": "25g",
+            "carbs": "40g",
+            "fat": "20g"
+        },
+        "cookTime": "15 minutes",
+        "instructions": "Grill beef patties and assemble with buns and toppings."
+    },
+    {
+        "id": 17,
+        "name": "Vegetable Lasagna",
+        "image": "images/Vegetable_Lasagna.webp",
+        "category": "Dinner",
+        "ingredients": ["Lasagna noodles", "Tomato sauce", "Zucchini", "Ricotta cheese", "Spinach"],
+        "nutrition": {
+            "calories": 350,
+            "protein": "15g",
+            "carbs": "50g",
+            "fat": "10g"
+        },
+        "cookTime": "1 hour",
+        "instructions": "Layer noodles with sauce and cheese, then bake."
+    },
+    {
+        "id": 18,
+        "name": "Fried Rice",
+        "image": "images/fried-rice.webp",
+        "category": "Dinner",
+        "ingredients": ["Rice", "Eggs", "Vegetables", "Soy sauce", "Green onions"],
+        "nutrition": {
+            "calories": 350,
+            "protein": "12g",
+            "carbs": "60g",
+            "fat": "10g"
+        },
+        "cookTime": "20 minutes",
+        "instructions": "Fry rice and vegetables, then mix in eggs and sauce."
+    },
+    {
+        "id": 19,
+        "name": "Moussaka",
+        "image": "images/Moussaka.webp",
+        "category": "Dinner",
+        "ingredients": ["Eggplant", "Ground beef", "Tomato sauce", "Cheese", "Béchamel sauce"],
+        "nutrition": {
+            "calories": 400,
+            "protein": "25g",
+            "carbs": "30g",
+            "fat": "25g"
+        },
+        "cookTime": "1 hour",
+        "instructions": "Layer eggplant, meat, and sauce, then bake."
+    },
+    {
+        "id": 20,
+        "name": "Shakshuka",
+        "image": "images/Shakshuka.webp",
+        "category": "Breakfast",
+        "ingredients": ["Eggs", "Tomato", "Onion", "Bell pepper", "Spices"],
+        "nutrition": {
+            "calories": 250,
+            "protein": "14g",
+            "carbs": "20g",
+            "fat": "15g"
+        },
+        "cookTime": "20 minutes",
+        "instructions": "Cook eggs in spicy tomato sauce."
+    },
+    {
+        "id": 21,
+        "name": "Fish Tacos",
+        "image": "images/three-fish-tacos.webp",
+        "category": "Dinner",
+        "ingredients": ["Fish fillets", "Taco shells", "Lettuce", "Salsa", "Avocado"],
+        "nutrition": {
+            "calories": 350,
+            "protein": "25g",
+            "carbs": "30g",
+            "fat": "15g"
+        },
+        "cookTime": "20 minutes",
+        "instructions": "Cook fish, then assemble in taco shells with toppings."
+    },
+    {
+        "id": 22,
+        "name": "Baked Ziti",
+        "image": "images/Baked_Ziti.webp",
+        "category": "Dinner",
+        "ingredients": ["Ziti pasta", "Tomato sauce", "Mozzarella cheese", "Parmesan cheese"],
+        "nutrition": {
+            "calories": 400,
+            "protein": "15g",
+            "carbs": "60g",
+            "fat": "15g"
+        },
+        "cookTime": "30 minutes",
+        "instructions": "Mix pasta with sauce and cheese, then bake."
+    },
+    {
+        "id": 23,
+        "name": "Pork Schnitzel",
+        "image": "images/Pork_Schnitzel.webp",
+        "category": "Dinner",
+        "ingredients": ["Pork chops", "Breadcrumbs", "Eggs", "Flour", "Lemon"],
+        "nutrition": {
+            "calories": 450,
+            "protein": "35g",
+            "carbs": "40g",
+            "fat": "20g"
+        },
+        "cookTime": "30 minutes",
+        "instructions": "Bread pork chops and fry until crispy."
+    },
+    {
+        "id": 24,
+        "name": "Apple Crisp",
+        "image": "images/Apple_Crisp.webp",
+        "category": "Dessert",
+        "ingredients": ["Apples", "Oats", "Brown sugar", "Butter", "Cinnamon"],
+        "nutrition": {
+            "calories": 200,
+            "protein": "2g",
+            "carbs": "35g",
+            "fat": "8g"
+        },
+        "cookTime": "45 minutes",
+        "instructions": "Bake apples with oat topping until crisp."
+    },
+    {
+        "id": 25,
+        "name": "Pasta Primavera",
+        "image": "images/pasta-primavera.webp",
+        "category": "Dinner",
+        "ingredients": ["Pasta", "Bell peppers", "Zucchini", "Tomatoes", "Parmesan cheese"],
+        "nutrition": {
+            "calories": 350,
+            "protein": "12g",
+            "carbs": "60g",
+            "fat": "8g" 
+        },
+        "cookTime": "25 minutes",
+        "instructions": "Toss pasta with sautéed vegetables and cheese."
+    }
+]
